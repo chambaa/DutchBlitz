@@ -9,6 +9,7 @@ StartUpWindow::StartUpWindow()
 
     QLabel * blitzLabel = new QLabel("BLITZ!");
     blitzLabel->setFont(dutchBlitz);
+    blitzLabel->setStyleSheet("color:#FFD700");
 
     QLabel * numOfPlayersLabel = new QLabel("Number of Players: ");
     numOfPlayersLabel->setFont(nameFont);

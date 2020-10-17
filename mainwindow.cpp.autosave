@@ -225,8 +225,8 @@ void MainWindow::onCalculatePressed()
         winMessage->addButton(QMessageBox::Ok);
         int win = winMessage->exec();
         if(win == QMessageBox::Ok) {
-            FinalRankingWindow * rankingsWindow = new FinalRankingWindow(ranking,this->numPlayers);
-            rankingsWindow->show();
+            FinalRankingWindow * rankingsWindow = new StartUpWindow();
+            startUp->show();
         }
     }
 }

@@ -1,0 +1,60 @@
+QWidget {
+        /*background-color: #ADD8E6;*/
+        /*background-color: #E0FFFF*/
+        background-color: #F5F5F5;
+}
+
+QPushButton:pressed {
+        background: #808080;
+}
+
+QPushButton {
+    background: #DCDCDC;
+    border-color: #808080;
+    border-style: outset;
+    border-width: 2px;
+}
+
+QPushButton#post:pressed {
+        background: #D3D3D3;
+}
+
+QPushButton#post {
+    background: #800000;
+    border-color: #000000;
+    border-style: outset;
+    border-width: 3px;
+    color: white;
+}
+
+QPushButton#accent:pressed {
+        background: #D3D3D3;
+}
+
+QPushButton#accent {
+    background: #800000;
+    border-color: #808080;
+    border-style: outset;
+    border-width: 2px;
+    color: white;
+}
+
+QLineEdit:focus {
+    background: #FFFAFA;
+    border-color: #808080;
+    border-style: inset;
+    border-width: 2px;
+}
+
+QLineEdit {
+    background: #F5F5F5;
+    border-color: #808080;
+    border-style: outset;
+    border-width: 2px;
+}
+
+QGroupBox {
+    border: none;
+}
+
+
