@@ -11,13 +11,13 @@ int main(int argc, char *argv[])
 
     QApplication app(argc, argv);
 
-//    // Load StyleSheet
-//    QFile styleFile(":/StyleSheet/StyleSheet.css");
-//    styleFile.open(QFile::ReadOnly);
+    // Load StyleSheet
+    QFile styleFile(":/StyleSheet/StyleSheet.css");
+    styleFile.open(QFile::ReadOnly);
 
-//    // Apply the loaded stylesheet
-//    QString style( styleFile.readAll() );
-//    app.setStyleSheet(style);
+    // Apply the loaded stylesheet
+    QString style( styleFile.readAll() );
+    app.setStyleSheet(style);
 
     StartUpWindow * startUp = new StartUpWindow();
     startUp->show();

@@ -6,7 +6,7 @@ FinalRankingWindow::FinalRankingWindow(std::map<QString,int> ranking, int numPla
 
   QLabel * rankingLabel = new QLabel("RANKINGS");
   rankingLabel->setFont(dutchBlitz);
-  rankingLabel->setStyleSheet("color:#FFD700");
+  rankingLabel->setObjectName("blueLabel");
 
   rankings = ranking;
   mainLayout = new QGridLayout();
@@ -22,7 +22,6 @@ FinalRankingWindow::FinalRankingWindow(std::map<QString,int> ranking, int numPla
   mainLayout->setSpacing(30);
 
   connect(playAgainButton,SIGNAL(pressed()),this,SLOT(onPlayAgainClicked()));
-  this->setStyleSheet("color:blue");
   this->setLayout(mainLayout);
 }
 

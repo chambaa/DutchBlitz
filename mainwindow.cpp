@@ -15,7 +15,7 @@ MainWindow::MainWindow(int playToValue, int numOfPlayers, QWidget *parent) : QWi
 
     QLabel * blitzLabel = new QLabel("BLITZ!");
     blitzLabel->setFont(dutchBlitz);
-    blitzLabel->setStyleSheet("color:#FFD700");
+    blitzLabel->setObjectName("blueLabel");
 
     QLabel * nameLabel = new QLabel("Name");
     nameLabel->setFont(labelFont);
@@ -28,7 +28,6 @@ MainWindow::MainWindow(int playToValue, int numOfPlayers, QWidget *parent) : QWi
     totalLabel->setStyleSheet("color:#FF4500");
 
     QPushButton * calculate = new QPushButton("Calculate");
-//    calculate->setStyleSheet("background-color:white; color:blue");
 
     mainLayout->addWidget(blitzLabel,0,0,1,3,Qt::AlignHCenter);
 
@@ -98,24 +97,22 @@ MainWindow::MainWindow(int playToValue, int numOfPlayers, QWidget *parent) : QWi
 
     mainLayout->addWidget(calculate,10,2);
     connect(calculate,SIGNAL(pressed()),this,SLOT(onCalculatePressed()));
-
-    this->setStyleSheet("background-color:white; color:blue");
     this->setLayout(mainLayout);
 }
 
 void MainWindow::makeNameEdit(QLineEdit * name) {
     name->setPlaceholderText("Name");
-    name->setStyleSheet("border:none; color:#006400");
+    name->setObjectName("green");
     name->setFont(nameFont);
 }
 void MainWindow::makeTotalEdit(QLineEdit * total) {
     total->setPlaceholderText("0");
     total->setReadOnly(true);
-    total->setStyleSheet("border:none; color:#FF4500");
+    total->setObjectName("red");
     total->setFont(nameFont);
 }
 void MainWindow::makeScoreEdit(QLineEdit * score) {
-    score->setStyleSheet("border-color: blue; border-style: solid; border-width: 2px;");
+    score->setObjectName("blue");
 }
 QLineEdit * MainWindow::getSpecificScore(int num) {
     switch(num) {

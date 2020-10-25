@@ -9,7 +9,7 @@ StartUpWindow::StartUpWindow()
 
     QLabel * blitzLabel = new QLabel("BLITZ!");
     blitzLabel->setFont(dutchBlitz);
-    blitzLabel->setStyleSheet("color:#FFD700");
+    blitzLabel->setObjectName("blueLabel");
 
     QLabel * numOfPlayersLabel = new QLabel("Number of Players: ");
     numOfPlayersLabel->setFont(nameFont);
@@ -37,13 +37,21 @@ StartUpWindow::StartUpWindow()
 
     connect(playButton,SIGNAL(pressed()),this,SLOT(onPlayClicked()));
 
-    this->setStyleSheet("background-color:white; color:blue");
     this->setLayout(mainLayout);
 }
 
 void StartUpWindow::onPlayClicked() {
     int playToValue = playingToValue->text().toInt();
     int numOfPlayers = numOfPlayersBox->currentText().toInt();
-    MainWindow * mainWindow = new MainWindow(playToValue, numOfPlayers);
-    mainWindow->show();
+    if(playToValue <= 0) {
+        QMessageBox * winMessage = new QMessageBox();
+        QString message = "Playing To value must be a positive number.";
+        winMessage->setText(message);
+        winMessage->addButton(QMessageBox::Ok);
+        winMessage->exec();
+    }
+    else {
+        MainWindow * mainWindow = new MainWindow(playToValue, numOfPlayers);
+        mainWindow->show();
+    }
 }

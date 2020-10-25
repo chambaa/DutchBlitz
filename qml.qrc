@@ -1,8 +1,1 @@
-<RCC>
-    <qresource prefix="/">
-        <file>main.qml</file>
-    </qresource>
-    <qresource prefix="/StyleSheet">
-        <file>StyleSheet.css</file>
-    </qresource>
-</RCC>
+<RCC/>
